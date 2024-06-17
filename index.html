@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Package</h1>
+        <div class="packages">
+            <div class="package gold" id="gold">
+                <h2>Gold Package</h2>
+                <p>Exclusive benefits and premium support</p>
+                <button onclick="openUuidModal('gold')">Choose Gold</button>
+                <button class="info-button" onclick="showInfo('gold')">Info</button>
+            </div>
+            <div class="package silver" id="silver">
+                <h2>Silver Package</h2>
+                <p>Standard benefits and support</p>
+                <button onclick="openUuidModal('silver')">Choose Silver</button>
+                <button class="info-button" onclick="showInfo('silver')">Info</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+        <h2 id="confirmation-message"></h2>
+    </div>
+
+    <div class="modal" id="info-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfo()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <div class="modal" id="uuid-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUuidModal()">&times;</span>
+            <h2>Enter Your UUID</h2>
+            <input type="text" id="uuid-input" placeholder="UUID">
+            <button id="uuid-submit" onclick="submitUuid()">Submit</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
